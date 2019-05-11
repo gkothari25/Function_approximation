@@ -66,4 +66,16 @@ for i in range(result.shape[0]):
         
 print("output is ", output)
 
-
+'''
+#My output is:
+iteration 999999
+loss 0.30927780270576477
+probability 
+tensor([[0.7276],
+        [0.3394],
+        [0.7276]], grad_fn=<SigmoidBackward>)
+output is  
+ [[1.]
+ [0.]
+ [1.]]
+'''
