@@ -7,5 +7,6 @@ Algorithms :-loss Backpropagation.
 Optimizer:SGD
 Activation function:- Tanh 
 Output:- Sigmoid function
-
+Framework:- Pytorch 
+Language:- Python3 
 
