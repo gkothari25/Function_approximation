@@ -2,7 +2,6 @@
 
 import torch
 import torch.nn.functional as F
-from collections import OrderedDict
 from torch import optim
 import numpy as np
 
@@ -25,13 +24,11 @@ class Orfunction(torch.nn.Module):
         x = torch.sigmoid(x)
         return x
 
-
 D_in = 2
 H = 2
 D_out = 1
 
 function_network =  Orfunction(D_in,H,D_out)
-
 
 loss_function = torch.nn.L1Loss()
 
@@ -55,10 +52,10 @@ for i in range(epochs):
 
 test_t =torch.tensor([[1,1],[0,0],[1,1]],dtype=torch.float)
 
-
 result = function_network.forward(test_t)
 
 print('probability',result)
+
 output = np.zeros(result.shape)
 
 for i in range(result.shape[0]):
@@ -66,6 +63,7 @@ for i in range(result.shape[0]):
         output[i] = 1
     else:
         output[i] = 0
+        
 print("output is ", output)
 
 
